@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --brand-ink: #132a3a;      /* deep navy - headers, nav */
+  --brand-teal: #1f5c56;     /* secondary accent - badges, links */
+  --brand-amber: #d98e2b;    /* warm amber - CTAs, price */
+  --brand-cream: #f6f4ee;    /* page background */
+  --brand-paper: #ffffff;    /* card background */
+  --brand-charcoal: #24303a; /* body text */
+
+  --bs-primary: var(--brand-ink);
+  --bs-primary-rgb: 19, 42, 58;
+  --bs-body-bg: var(--brand-cream);
+  --bs-body-color: var(--brand-charcoal);
+  --bs-link-color: var(--brand-teal);
+  --bs-link-hover-color: var(--brand-amber);
+
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--brand-cream);
+}
+
+h1, h2, h3, h4, h5, .navbar-brand, .display-font {
+  font-family: "Fraunces", Georgia, serif;
+  color: var(--brand-ink);
+}
+
+/* ---------- Navbar ---------- */
+.navbar-office {
+  background-color: var(--brand-ink) !important;
+}
+.navbar-office .navbar-brand,
+.navbar-office .nav-link {
+  color: #f2ede1 !important;
+}
+.navbar-office .nav-link:hover,
+.navbar-office .nav-link.active {
+  color: var(--brand-amber) !important;
+}
+.navbar-office .navbar-brand i {
+  color: var(--brand-amber);
+}
+
+/* ---------- Brand buttons / text ---------- */
+.btn-brand {
+  background-color: var(--brand-amber);
+  border-color: var(--brand-amber);
+  color: #24303a;
+  font-weight: 600;
+}
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: #c17e1f;
+  border-color: #c17e1f;
+  color: #fff;
+}
+.text-brand {
+  color: var(--brand-amber) !important;
+}
+.bg-brand-ink {
+  background-color: var(--brand-ink) !important;
+}
+
+/* ---------- Hero banner ---------- */
+.hero-banner {
+  background: linear-gradient(135deg, var(--brand-ink) 0%, #1f4256 65%, var(--brand-teal) 100%);
+  color: #f6f4ee;
+  padding: 4.5rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 85% 20%, rgba(217, 142, 43, 0.25), transparent 45%);
+  pointer-events: none;
+}
+.hero-banner .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--brand-amber);
+  font-weight: 600;
+}
+
+/* ---------- Product cards ---------- */
+.product-card {
+  border: 1px solid rgba(19, 42, 58, 0.08);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  background-color: var(--brand-paper);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(19, 42, 58, 0.12) !important;
+}
+.product-card .card-img-top {
+  height: 190px;
+  object-fit: cover;
+}
+
+/* ---------- Section titles ---------- */
+.section-title {
+  position: relative;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  background-color: var(--brand-amber);
+  border-radius: 2px;
+}
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ---------- Category filter pills ---------- */
+.category-pill {
+  border-radius: 50rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ---------- Cart offcanvas ---------- */
+.cart-item + .cart-item {
+  border-top: 1px solid rgba(19, 42, 58, 0.08);
+}
+.cart-total {
+  font-family: "Fraunces", serif;
+}
+
+/* ---------- Video cards ---------- */
+.video-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+/* ---------- Footer ---------- */
+.footer-office {
+  background-color: var(--brand-ink);
+  color: #cfd6da;
+}
+.footer-office a {
+  color: #f2ede1;
+  text-decoration: none;
+}
+.footer-office a:hover {
+  color: var(--brand-amber);
+}
+
+/* ---------- Featured ribbon ---------- */
+.ribbon-badge {
+  background-color: var(--brand-teal);
+}
+
+/* ---------- PDF viewer section ---------- */
+.pdf-frame-wrapper {
+  border: 1px solid rgba(19, 42, 58, 0.12);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  min-height: 70vh;
+}
+.pdf-frame-wrapper iframe {
+  width: 100%;
+  height: 70vh;
+  border: 0;
+}
